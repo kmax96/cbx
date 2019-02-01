@@ -1,4 +1,4 @@
-﻿//checkbox cbx generator
+//checkbox cbx generator
 
 
 
@@ -52,7 +52,7 @@ var cbx = function (id) {
             }
 
 
-            var valueTmp = "<input id=\"" + this.valueid+"\" name=\"" + itmID + "_value\" type=\"text\" style='visibility: hidden;'  />";
+            var valueTmp = "<input id=\"" + this.valueid + "\" name=\"" + this.valueid + "_value\" type=\"text\" style='visibility: hidden;'  />";
             div.append(valueTmp);
 
         }
@@ -77,6 +77,10 @@ var cbx = function (id) {
 
     this.val = function ()
     {
+        if (!this.enabled)
+        {
+            return;
+        }
 
         for (var i = 0; i < this.source.length; i++) {
             var itm = this.source[i];
