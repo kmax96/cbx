@@ -52,7 +52,7 @@ var cbx = function (id) {
             }
 
 
-            var valueTmp = "<input id=\"" + this.valueid + "\" name=\"" + this.valueid + "_value\" type=\"text\" style='visibility: hidden;'  />";
+            var valueTmp = "<input id=\"" + this.valueid + "\" name=\"" + this.valueid + "\" type=\"text\" style='visibility: hidden;'  />";
             div.append(valueTmp);
 
         }
