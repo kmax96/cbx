@@ -1,6 +1,4 @@
-//checkbox cbx generator
-
-
+//CBX - checkbox cbx generator
 
 var cbxtempsample = [
 {
@@ -43,9 +41,17 @@ var cbx = function (id) {
                     tt = "data-toggle='tooltip' data-html='true' title='"+ itm.tooltip +"' data-placement='top'";
                 }
 
-                var template = "<div class=\"form-check form-check-inline\" " + tt+">";
-                template += "<input id=\"" + itmID + "\" name=\"" + itmID + "\" type=\"checkbox\" class=\"form-check-input\" " + checked +" />";
-                template += "<label class=\"form-check-label\" for=\"" + itmID + "\">" +itm.name +"</label></div>"; 
+                //var template = "<div class=\"form-check form-check-inline\" " + tt+">";
+                //template += "<input id=\"" + itmID + "\" name=\"" + itmID + "\" type=\"checkbox\" class=\"form-check-input\" " + checked +" />";
+                //template += "<label class=\"form-check-label\" for=\"" + itmID + "\">" +itm.name +"</label></div>"; 
+
+                var template = "<div class=\"form-check form-check-inline\" " + tt + ">";
+                template += "<label class='cbx'>" + itm.name;
+                template += "<input type='checkbox' " + checked + "  id=\"" + itmID + "\" name=\"" + itmID + "\" >";
+                template += " <span class='checkmark'></span>";
+                template += "</div>";
+
+
               
                 div.append(template);
 
